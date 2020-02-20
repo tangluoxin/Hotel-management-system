@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TenantManageMainWindow</class>
+ <widget class="QMainWindow" name="TenantManageMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>2061</width>
+    <height>1036</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>微软雅黑</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#TenantManageMainWindow{
+border-image: url(:/mainbackground.jpg);
+}
+#TenantManageMainWindow *{
+border-image: url();
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+    </font>
+   </property>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>2150</x>
+      <y>870</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: rgb(215, 228, 221); border-radius: 3px; color: rgb(2, 0, 0); }</string>
+    </property>
+    <property name="text">
+     <string>返回主界面</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(215, 228,221);
+color: rgb(2, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>今日房态图</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>181</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: rgba(240, 240, 240,0%); border-radius: 3px; color: rgb(240, 240, 240); }</string>
+    </property>
+    <property name="text">
+     <string>101单人间</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_refresh">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>1550</x>
+      <y>630</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: rgb(215, 228, 221); border-radius: 3px; color: rgb(2, 0, 0); }</string>
+    </property>
+    <property name="text">
+     <string>刷新</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_23">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>20</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color:rgb(195, 213, 223); border-radius: 3px; color: rgb(122, 136, 127) }</string>
+    </property>
+    <property name="text">
+     <string>空房</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_24">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>20</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: rgb(104, 160, 177); border-radius: 3px; color: rgb(255, 255, 255); }</string>
+    </property>
+    <property name="text">
+     <string>已预定</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_26">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>20</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: rgb(25, 61, 95); border-radius: 3px; color: rgb(255, 255, 255); }</string>
+    </property>
+    <property name="text">
+     <string>已入住</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>1210</x>
+      <y>530</y>
+      <width>301</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <property name="horizontalSpacing">
+      <number>16</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>19</number>
+     </property>
+     <property name="leftMargin">
+      <number>13</number>
+     </property>
+     <property name="topMargin">
+      <number>13</number>
+     </property>
+     <property name="rightMargin">
+      <number>39</number>
+     </property>
+     <property name="bottomMargin">
+      <number>12</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(215, 228,221);
+color: rgb(2, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>客房编号</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit_roomno">
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 70%);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineEdit_price">
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 70%);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(215, 228,221);
+color: rgb(2, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>房间类型</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="lineEdit_roomtype">
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 70%);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(215, 228,221);
+color: rgb(2, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>  楼  层  </string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="lineEdit_floor">
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 70%);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(215, 228,221);
+color: rgb(2, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>客房状态</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="lineEdit_state">
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 70%);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(215, 228,221);
+color: rgb(2, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string> 价    格 </string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton_22">
+    <property name="geometry">
+     <rect>
+      <x>1550</x>
+      <y>580</y>
+      <width>112</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: rgb(215, 228, 221); border-radius: 3px; color: rgb(2, 0, 0); }</string>
+    </property>
+    <property name="text">
+     <string>保存修改</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_27">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>20</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: rgb(129, 207, 209); border-radius: 3px; color: rgb(255, 255, 255); }</string>
+    </property>
+    <property name="text">
+     <string>装修房</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_25">
+    <property name="geometry">
+     <rect>
+      <x>1550</x>
+      <y>530</y>
+      <width>112</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: rgb(215, 228, 221); border-radius: 3px; color: rgb(2, 0, 0); }</string>
+    </property>
+    <property name="text">
+     <string>查询</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>1210</x>
+      <y>80</y>
+      <width>481</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTableView QTableCornerButton::section {
+   /*  background: red;
+    border: 2px outset red;*/
+    color: red;
+    background-color: rgba(129, 207, 209, 30%);
+    border: 5px solid #f6f7fa;
+    border-radius:1px;
+    border-color: rgba(129, 207, 209, 30%);
+ }
+QTableView {
+    color: black;                                       /*表格内文字颜色*/
+    gridline-color: black;                              /*表格内框颜色*/
+    background-color: rgba(108, 108, 108, 0%);               /*表格内背景色*/
+    alternate-background-color: rgb(64, 64, 64);
+    selection-color: black;                             /*选中区域的文字颜色*/
+    selection-background-color: rgb(195, 213, 223);        /*选中区域的背景色*/
+    border: 2px groove gray;
+    border-radius: 0px;
+    padding: 2px 4px;
+}
+QHeaderView {
+    color: black;
+	font: 9pt &quot;微软雅黑&quot;;
+    background-color: rgba(195, 213, 223, 0%);/*设置表头空白区域背景色*/
+    border: 0px solid rgb(144, 144, 144);
+    border:0px solid rgb(191,191,191);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-radius:0px;
+    min-height:29px;
+}
+QHeaderView::section {
+    color: black;
+    background-color: rgba(129, 207, 209, 30%);
+    border: 5px solid #f6f7fa;
+    border-radius:1px;
+    border-color: rgba(129, 207, 209, 30%);
+} </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_delete">
+    <property name="geometry">
+     <rect>
+      <x>1550</x>
+      <y>680</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: rgb(215, 228, 221); border-radius: 3px; color: rgb(2, 0, 0); }</string>
+    </property>
+    <property name="text">
+     <string>删除</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_addroom">
+    <property name="geometry">
+     <rect>
+      <x>1550</x>
+      <y>730</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: rgb(215, 228, 221); border-radius: 3px; color: rgb(2, 0, 0); }</string>
+    </property>
+    <property name="text">
+     <string>添加</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>2061</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
